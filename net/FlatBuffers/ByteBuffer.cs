@@ -167,9 +167,11 @@ namespace FlatBuffers
         
         public void PutByte(int offset, byte[] value) {
             var count = value.Length;
-            AssertOffsetAndLength(offset, sizeof(byte) * count);
-            for (var i = 0; i < count; ++i)
-                _buffer[offset + i] = value[i];
+            var num_bytes = sizeof(byte) * count;
+            AssertOffsetAndLength(offset, num_bytes);
+            //for (var i = 0; i < count; ++i)
+            //    _buffer[offset + i] = value[i];
+            Buffer.BlockCopy(value, 0, _buffer, offset, num_bytes);
         }
 
         // this method exists in order to conform with Java ByteBuffer standards
