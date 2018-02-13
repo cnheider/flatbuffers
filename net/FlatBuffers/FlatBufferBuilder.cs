@@ -478,6 +478,61 @@ namespace FlatBuffers
             Encoding.UTF8.GetBytes(s, 0, s.Length, _bb.Data, _space -= utf8StringLen);
             return new StringOffset(EndVector().Value);
         }
+        
+        
+        ///<summary>
+        /// Create a new array/vector and return a ByteBuffer to be filled later.
+        /// Call {@link #endVector} after this method to get an offset to the beginning
+        /// of vector.
+        ///</summary>
+        /// <param name=" elem_size"> the size of each element in bytes.</param>
+        /// <param name=" num_elems"> number of elements in the vector.</param>
+        /// <param name=" alignment"> byte alignment.</param>
+        /// <returns>
+        /// ByteBuffer with position and limit set to the space allocated for the array.
+        /// </returns> TODO:
+        /*public ByteBuffer CreateUnintializedVector(int elem_size, int num_elems, int alignment) {
+                int length = elem_size * num_elems;
+                this.StartVector(elem_size, num_elems, alignment);
+        
+                        this._bb.Position = this._space -= length;
+        
+                        // Slice and limit the copy vector to point to the 'array'
+                                ByteBuffer copy = this._bb.slice().order(ByteOrder.LITTLE_ENDIAN);
+                copy.limit(length);
+                return copy;
+            }
+        */
+        
+        ///<summary>
+        /// Create a byte array in the buffer.
+        ///</summary>
+        /// <param name="arr"> A source array with data.</param>
+        /// <returns> The offset in the buffer where the encoded array starts.
+        ///</returns>
+        public VectorOffset CreateByteVector(byte[] arr) {
+            NotNested();
+            int length = arr.Length;
+            this.StartVector(1, length, 1);
+            this._space -= length;
+            this._bb.Put(this._space, arr);
+            return this.EndVector();
+        }
+        
+        ///<summary>
+        /// Create a byte array in the buffer.
+        ///</summary>
+        /// <param name="arr"> A source array with data.</param>
+        /// <returns> The offset in the buffer where the encoded array starts.
+        ///</returns>
+        public VectorOffset CreateFloatVector(float[] arr) {
+            NotNested();
+            int length = arr.Length;
+            this.StartVector(1, length, 1);
+            this._space -= length;
+            this._bb.Put(this._space, arr);
+            return this.EndVector();
+        }
 
         /// @cond FLATBUFFERS_INTERNAL
         // Structs are stored inline, so nothing additional is being added.
