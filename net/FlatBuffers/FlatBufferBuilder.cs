@@ -528,7 +528,7 @@ namespace FlatBuffers
         public VectorOffset CreateFloatVector(float[] arr) {
             NotNested();
             int length = arr.Length;
-            this.StartVector(1, length, 1);
+            this.StartVector(4, length, 4);
             this._space -= length;
             this._bb.Put(this._space, arr);
             return this.EndVector();
