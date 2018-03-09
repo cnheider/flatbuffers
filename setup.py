@@ -42,12 +42,12 @@ def version():
     return version
 
 setup(
-    name='flatbuffers',
+    name='neodroid-flatbuffers',
     version=version(),
     license='Apache 2.0',
     author='FlatBuffers Contributors',
     author_email='me@rwinslow.com',
-    url='https://github.com/google/flatbuffers',
+    url='https://github.com/sintefneodroid/flatbuffers',
     long_description=('Python runtime library for use with the Flatbuffers'
                       'serialization format.'),
     packages=['python/flatbuffers'],
