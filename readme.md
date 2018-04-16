@@ -2,7 +2,53 @@
 ===========
 
 [![Join the chat at https://gitter.im/google/flatbuffers](https://badges.gitter.im/google/flatbuffers.svg)](https://gitter.im/google/flatbuffers?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/google/flatbuffers.svg?branch=master)](https://travis-ci.org/google/flatbuffers) [![Build status](https://ci.appveyor.com/api/projects/status/yg5idd2fnusv1n10?svg=true)](https://ci.appveyor.com/project/gwvo/flatbuffers)
+
+
+<table>
+   <tr>
+     <td>
+       <a href='https://travis-ci.org/sintefneodroid/flatbuffers'>
+         <img src='https://travis-ci.org/sintefneodroid/flatbuffers.svg?branch=master' alt='Build Status' />
+       </a>
+     </td>
+     <td>
+       <a href='https://coveralls.io/github/sintefneodroid/flatbuffers?branch=master'>
+         <img src='https://coveralls.io/repos/github/sintefneodroid/flatbuffers/badge.svg?branch=master' alt='Coverage Status' />
+       </a>
+     </td>
+     <td>
+       <a href='https://github.com/sintefneodroid/flatbuffers/issues'>
+         <img src='https://img.shields.io/github/issues/sintefneodroid/flatbuffers.svg?style=flat' alt='GitHub Issues' />
+       </a>
+     </td>
+     <td>
+       <a href='https://github.com/sintefneodroid/flatbuffers/network'>
+         <img src='https://img.shields.io/github/forks/sintefneodroid/flatbuffers.svg?style=flat' alt='GitHub Forks' />
+       </a>
+     </td>
+       <td>
+       <a href='https://github.com/sintefneodroid/flatbuffers/stargazers'>
+         <img src='https://img.shields.io/github/stars/sintefneodroid/flatbuffers.svg?style=flat' alt='GitHub Stars' />
+       </a>
+     </td>
+       <td>
+       <a href='https://github.com/sintefneodroid/flatbuffers/blob/master/LICENSE.md'>
+         <img src='https://img.shields.io/github/license/sintefneodroid/flatbuffers.svg?style=flat' alt='GitHub License' />
+       </a>
+     </td>
+     <td>
+       <a href='https://www.nuget.org/packages/Neodroid-FlatBuffers/'>
+         <img src='https://img.shields.io/nuget/dt/Neodroid-FlatBuffers.svg?style=flat' alt='NuGet Downloads' />
+       </a>
+     </td>
+       <td>
+       <a href='https://www.nuget.org/packages/Neodroid-FlatBuffers/'>
+         <img src='https://img.shields.io/nuget/v/Neodroid-FlatBuffers.svg?style=flat' alt='NuGet Version' />
+       </a>
+     </td>
+  </tr>
+</table>
+
 
 **FlatBuffers** is an efficient cross platform serialization library for games and
 other memory constrained apps. It allows you to directly access serialized data without
